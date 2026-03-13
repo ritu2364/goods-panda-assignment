@@ -1,30 +1,176 @@
-body{
-font-family: Arial;
-margin:0;
+/* General */
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
 }
 
-header{
-background:#ff2b85;
-color:white;
-text-align:center;
-padding:20px;
+/* Header */
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background:#ff2b85;
+    color:white;
 }
 
-section{
-text-align:center;
-padding:60px;
+header img {
+    height:50px;
 }
 
-button{
-background:#ff2b85;
-color:white;
-padding:10px 20px;
-border:none;
+header .menu img {
+    height:30px;
+    cursor:pointer;
 }
 
-footer{
-background:black;
-color:white;
-text-align:center;
-padding:20px;
+/* Hero */
+.hero {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px;
+    background:#ffeef4;
+    flex-wrap:wrap;
+}
+
+.hero-text {
+    max-width:50%;
+}
+
+.hero-text h1 {
+    font-size:36px;
+}
+
+.hero-text p.price {
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.hero-text button {
+    padding:10px 20px;
+    background:#ff2b85;
+    color:white;
+    border:none;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.hero-image img {
+    max-width:400px;
+    width:100%;
+}
+
+/* Categories */
+.categories {
+    padding:40px;
+    text-align:center;
+}
+
+.categories h2 {
+    margin-bottom:20px;
+}
+
+.category-card {
+    display:inline-block;
+    width:150px;
+    padding:20px;
+    margin:10px;
+    border-radius:15px;
+    color:white;
+    font-weight:bold;
+}
+
+.category-card.watch { background:orange; }
+.category-card.bag { background:pink; }
+.category-card.shoes { background:blue; }
+
+/* Products */
+.products {
+    padding:40px;
+    text-align:center;
+}
+
+.products h2 {
+    margin-bottom:20px;
+}
+
+.product-card {
+    display:inline-block;
+    width:250px;
+    padding:20px;
+    margin:10px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    text-align:center;
+}
+
+.product-card img {
+    width:100%;
+    height:auto;
+}
+
+.product-card button {
+    margin-top:10px;
+    padding:8px 15px;
+    background:#ff2b85;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+/* Newsletter */
+.newsletter {
+    padding:40px;
+    background:#ffeef4;
+    text-align:center;
+}
+
+.newsletter input[type="email"] {
+    padding:10px;
+    width:250px;
+    max-width:80%;
+}
+
+.newsletter button {
+    padding:10px 20px;
+    background:#ff2b85;
+    color:white;
+    border:none;
+    cursor:pointer;
+    margin-left:5px;
+}
+
+/* Footer */
+footer {
+    padding:20px;
+    background:#222;
+    color:white;
+    text-align:center;
+}
+
+/* Responsive */
+@media(max-width:1200px) {
+    .hero-text h1 { font-size:28px; }
+}
+
+@media(max-width:992px) {
+    .categories .category-card,
+    .products .product-card {
+        display:block;
+        margin:20px auto;
+        width:80%;
+    }
+    .hero-text { max-width:100%; }
+}
+
+@media(max-width:640px) {
+    .categories .category-card,
+    .products .product-card {
+        width:100%;
+    }
+    .newsletter input, .newsletter button {
+        display:block;
+        width:90%;
+        margin:10px auto;
+    }
 }
